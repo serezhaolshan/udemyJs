@@ -2,7 +2,7 @@
 
 console.log('arr' + '-object');
 
-console.log(4 + +'5');
+console.log(4 + '5');
 
 let incr = 10,
     decr = 10;
@@ -23,4 +23,6 @@ const isChecked = true,
       isClose = false;
 
 console.log(isChecked || isClose);
+
+
 
