@@ -31,10 +31,26 @@ for(let i = 0; i < 2; i++) {
 
 if(personalMovieDB.count < 10) {
     alert("Просмотрено довольно мало фильмов");
-} else if(10 <= personalMovieDB.count <= 30) {
+} else if(10 <= personalMovieDB.count <= 30) { //else if(personalMovieDB.count >= 10 && personalMovieDB.count < 30)
     alert("Вы-классический зритель");
 } else if(personalMovieDB.count > 30) {
     alert("Вы-киноман");
 }else {
     alert("Произошла ошибка");
 }
+
+function showMyDB(privat){
+    if(!privat){
+        console.log(personalMovieDB);
+    } else {
+        console.log("Error");
+    }
+}
+showMyDB(personalMovieDB.privat);
+
+function writeYourGenres(){
+    for(let i = 0; i < 4; i++) {
+        personalMovieDB.genres[i] = prompt(`Ваш любимый жанр под номером ${i+1} `,"");
+    }
+}
+writeYourGenres();
